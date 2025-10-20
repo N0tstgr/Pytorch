@@ -1,0 +1,85 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "gpuType": "T4",
+      "authorship_tag": "ABX9TyNPwnwdcJn+PrXEJlFNasJ+",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    },
+    "accelerator": "GPU"
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/N0tstgr/Pytorch/blob/main/yesPytorch\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 4,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "kywzc0QW9_gC",
+        "outputId": "93f2048e-ea37-41f3-8fd1-492cd814aa5f"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "2.8.0+cu126\n"
+          ]
+        }
+      ],
+      "source": [
+        "import torch\n",
+        "print(torch.__version__)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "if torch.cuda.is_available():\n",
+        "  print(\"Gpu is available\")\n",
+        "  print(f\"using GPU: {torch.cuda.get_device_name(0)}\")\n",
+        "\n",
+        "else:\n",
+        "    print(\"GPU not available. Using CPU.\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "O4lwLPHo-fVn",
+        "outputId": "745cb285-350a-4f1c-e2ff-2714bc0d4b0c"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Gpu is available\n",
+            "using GPU: Tesla T4\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
